@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
+    <title>Hotspot @sahabatmoeka</title>
+    <style>
+        html {
+            height: 100%;
+            background-image: url('img/bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            width: 350px;
+            position: relative;
+            margin-top: 2rem;
+            left: 50%;
+            transform: translate(-50%, 0);            
+        }
+        .img-title{
+            width: 100%;
+        }
+
+        .content{
+            margin-top: -3.5rem;
+            width: 80%;
+            background-color: #DCA393;
+            border-radius: 175px 175px 0 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 1rem;
+        }
+
+        .img-logo{
+            width: 90%;
+            padding-top: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .sub-title{
+            text-align: center;
+            color: #214194;
+            padding: 0;
+            margin: 2px;
+            font-weight: bold;
+        }
+        table{
+            width: 90%;
+            padding: 2px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            color: #214194;
+        }
+        .button {
+            width: 225px;
+            padding: 0.8rem;
+            background-color: #f43838;
+            color: #ffffff;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            display: block;
+            cursor: pointer;
+        }
+        .content p {
+            color: red;
+            font-size: small;
+            line-height: 1.2;
+            background-color: #E6B0AA;
+            width: 90%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        function startClock() {
+            $(if popup == 'true')
+            open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+        $(endif)
+        location.href = unescape('$(link-redirect-esc)');
+        }
+
+    </script> 
+</head>
+<body onLoad="startClock()">
+    <section>
+        <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
+        <div class="content">
+            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
+            <h3 class="sub-title">Hotspot error: $(error)</h3>
+            <p>Log in page: <a href="$(link-login)">$(link-login)</a></p>
+        </div>
+    </section>
+</body>
+</html>

@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotspot SMK Muh Karangmojo</title>
+    <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
+    <title>Welcom to Hotspot @sahabatmoeka</title>
     <style>
         html {
             height: 100%;
+            background-color: #214194;
             background-image: url('img/bg.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -26,6 +28,7 @@
             left: 50%;
             transform: translate(-50%, 0);            
         }
+        
         .img-title{
             width: 100%;
         }
@@ -86,6 +89,19 @@
             text-align: center;
         }
 
+        .content p {
+            color: red;
+            font-size: small;
+            line-height: 1.2;
+            background-color: #E6B0AA;
+            width: 90%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8px;
+            border-radius: 10px;
+        }
+
         p {
             width: 100%;
             text-align: center;
@@ -102,7 +118,7 @@
             text-align: center;
             text-decoration: none;
             line-height: 1.5;
-            display: block;
+            /* display: block; */
             font-size: 14px;
             font-weight: lighter;
         }
@@ -126,21 +142,45 @@
     </style>
 </head>
 <body>
+    $(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post" style="display:none">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+
+    <script src="/md5.js"></script>
+    <script>
+        function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+        }
+
+    </script>
+    $(endif)
     <section>
         <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
+        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
         <div class="content">
             <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
             <div class="input-box" style="margin-top: 10px;">
-                <input type="text" name="username" id="username" placeholder="username">
+                <input type="text" name="username" id="username" placeholder="username" value="$(username)">
             </div>
             <div class="input-box" style="margin-bottom: 1rem;">
                 <input type="password" name="password" id="password" placeholder="password">
             </div>
-            <button type="button" class="login">Login</button>
+            $(if error)
+            <p>$(error)</p>
+            $(endif)
+            <button type="submit" class="login">Connect</button>
         </div>
+        </form>
         <p>Informasi Penerimaan Siswa & Santri Baru <br>
-            Kunjungi Media Kami di @sahabatmoeka        
-            <a href="#" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
+            Kunjungi Media Kami di <a href="https://youtube.com/c/SahabatMoeka/about" class="link" target="_blank">@sahabatmoeka</a>
+            <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
         </p>
         <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
     </section>
