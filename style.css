@@ -1,0 +1,189 @@
+html {
+    height: 100%;
+    background-color: #214194;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+section {
+    width: 400px;
+    position: relative;
+    margin-top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);            
+}
+
+.img-title{
+    width: 100%;
+}
+
+.content{
+    margin-top: -3.5rem;
+    width: 80%;
+    background-color: #DCA393;
+    border-radius: 200px 200px 0 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+.img-logo{
+    width: 90%;
+    padding-top: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-box{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 200px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #214194;
+    color: white;
+}
+
+.login {
+    width: 225px;
+    padding: 0.8rem;
+    background-color: #C9E265;
+    color: #214194;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.content p {
+    color: red;
+    font-size: small;
+    line-height: 1.2;
+    background-color: #E6B0AA;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+p {
+    width: 100%;
+    text-align: center;
+    color: #DCA393;
+    line-height: 1.5;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p .link {
+    color: #DCA393;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    /* display: block; */
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.login:hover {
+    cursor:pointer;
+    background-color: #e4f892;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a:hover {
+    color: white;
+}
+
+.wifi-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trial{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #214194;
+}
+
+.trial a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trial a:hover{
+    color: #ff0000;
+}
+
+.sub-title{
+    text-align: center;
+    color: #214194;
+    padding: 0;
+    margin: 2px;
+    font-weight: bold;
+}
+
+.button {
+    width: 225px;
+    padding: 0.8rem;
+    background-color: #C9E265;
+    color: #214194;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    display: block;
+    cursor: pointer;
+}
+
+table{
+    width: 90%;
+    padding: 2px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    color: #214194;
+}
+
+.bg-danger {
+    background-color: #f43838;
+    color: #fff;
+}

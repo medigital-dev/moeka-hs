@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    $(if refresh-timeout)
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    $(endif)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+
     <title>Hotspot Status</title>
+    
+    <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
     <style>
-        html {
+        /* html {
             height: 100%;
+            background-color: #214194;
             background-image: url('img/bg.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -78,19 +88,18 @@
             margin-top: 1rem;
             display: block;
             cursor: pointer;
-        }
+        } */
 
     </style>
     <script>
-
         $(if advert-pending == 'yes')
             var popup = '';
             function focusAdvert() {
-            if (window.focus) popup.focus();
+                if (window.focus) popup.focus();
             }
             function openAdvert() {
-            popup = open('$(link-advert)', 'hotspot_advert', '');
-            setTimeout("focusAdvert()", 1000);
+                popup = open('$(link-advert)', 'hotspot_advert', '');
+                setTimeout("focusAdvert()", 1000);
             }
         $(endif)
             function openLogout() {
@@ -105,7 +114,7 @@
     <section>
         <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
         <div class="content">
-            <form action="$(link-logout)" name="logout" onSubmit="return openLogout()"></form>
+            <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
             <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
             <h3 class="sub-title">Wi-Fi Status</h3>
             <table>
@@ -137,7 +146,7 @@
                 </tr>
             </table>
             $(if login-by-mac != 'yes')
-            <button type="submit" class="button">Logout</button>
+            <button type="submit" class="button bg-danger">Logout</button>
             $(endif)
             </form>
         </div>
