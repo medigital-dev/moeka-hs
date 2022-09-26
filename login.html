@@ -32,12 +32,15 @@
 
     </script>
     $(endif)
+    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris1">
+    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris2">
     <section>
         <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
         <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
         <input type="hidden" name="dst" value="$(link-orig)" />
         <input type="hidden" name="popup" value="true" />
         <div class="content">
+            <img src="img/garis-oval.png" alt="Oval" class="bg-garis">
             <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
             <div class="input-box" style="margin-top: 10px;">
                 <input type="text" name="username" id="username" placeholder="username" value="$(username)">
@@ -57,21 +60,15 @@
         </div>
         </form>
     </section>
-    <p>Informasi Penerimaan Siswa & Santri Baru Tahun Pelajaran <span id="tp"></span><br>
-        Kunjungi Media Kami di <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
+    <p>
+        Informasi Penerimaan Siswa & Santri Baru<br>
+        Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
+        <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
         <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
     </p>
     <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
+
     <script src="jquery.min.js"></script>
-    <script>
-$(document).ready(function(){
-    const date = new Date();
-    const month = date.getMonth();
-    const year1 = date.getFullYear();
-    var tp = (year1+1)+"/"+(year1+2);
-    $('#tp').text(tp);
-    console.log(tp);
-});
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
