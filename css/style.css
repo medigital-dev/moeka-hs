@@ -1,17 +1,129 @@
-html {
-    height: 100%;
+body {
     background-color: #214194;
-    /* background-image: url('img/garis-oval.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain; */
 }
+
+.box-header {
+    width: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.img-header {
+    width: 420px;
+}
+
+.content {
+    margin-top: -3.5rem;
+    background-color: #DCA393;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 150px 150px 0 0;
+}
+
+.box-logo {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.img-logo {
+    width: 100%;
+}
+
+.box-form {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.box-input {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #214194;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.8;
+    text-align: center;
+}
+
+.btn-login {
+    background-color: #C9E265;
+    color: #214194;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.btn-login:hover {
+    color: #fff;
+    background-color: #214194;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box-info {
+    width: 100%;
+    text-align: center;
+    color: #DCA393;
+    line-height: 1.5;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.link {
+    color: #DCA393;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.wifi-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 480px){
+    .img-header {
+        width: 320px;
+    }
+
+    .content {
+        width: 240px;
+        margin-top: -1.5rem;
+    }
+}
+
+
+/* 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
 }
+
 section {
     width: 400px;
     position: relative;
@@ -53,15 +165,6 @@ section {
     margin-top: 5px;
 }
 
-input[type="text"], input[type="password"] {
-    width: 200px;
-    padding: 0.8rem;
-    border-radius: 10px;
-    border: none;
-    background-color: #214194;
-    color: white;
-}
-
 .login {
     width: 225px;
     padding: 0.8rem;
@@ -75,12 +178,6 @@ input[type="text"], input[type="password"] {
     display: block;
     text-align: center;
     text-decoration: none;
-}
-
-::placeholder {
-    color: white;
-    opacity: 0.8;
-    text-align: center;
 }
 
 .content p {
@@ -112,7 +209,6 @@ p .link {
     text-align: center;
     text-decoration: none;
     line-height: 1.5;
-    /* display: block; */
     font-size: 14px;
     font-weight: lighter;
 }
@@ -223,3 +319,9 @@ table{
         width: 120%;
     }
 }
+
+@media screen and (max-width: 480px){
+    section {
+        width: 360px;
+    }
+} */

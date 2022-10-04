@@ -10,7 +10,8 @@
     <title>Welcom to Hotspot @sahabatmoeka</title>
     
     <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     $(if chap-id)
@@ -21,7 +22,7 @@
         <input type="hidden" name="popup" value="true" />
     </form>
 
-    <script src="/md5.js"></script>
+    <script src="js/md5.js"></script>
     <script>
         function doLogin() {
             document.sendin.username.value = document.login.username.value;
@@ -32,7 +33,67 @@
 
     </script>
     $(endif)
-    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris1">
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="box-header">
+                        <img src="img/title.png" alt="Sahabat Moeka" class="img-header">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="content">
+                        <div class="box-logo">
+                            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
+                        </div>
+                        <div class="box-form">
+                            <div class="box-input">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Username">
+                                  </div>
+                            </div>
+                            <div class="box-input">
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                  </div>
+                            </div>
+                            <div class="box-input">
+                                $(if error)
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    $(error)
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                $(endif)
+                            </div>
+                            <div class="box-input">
+                                <div class="d-grid gap-2 d-md-block">
+                                    <button class="btn-login" type="button">Connect</button>
+                                </div>
+                                $(if trial == 'yes')
+                                <span class="small">
+                                    Trial Wi-Fi Tersedia!, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" class="text-decoration-none link-success">klik disini</a>.
+                                </span>
+                                $(endif)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="box-info">
+                Informasi Penerimaan Siswa & Santri Baru<br>
+                Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
+                <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
+                <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
+            </p>
+        </div>
+        <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
+    </section>
+
+    <!-- 
+        
+        <img src="img/aksesoris.png" alt="aksesoris" class="position-fixed " style="width: 100px;">
     <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris2">
     <section>
         <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
@@ -66,9 +127,12 @@
         <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
         <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
     </p>
-    <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
+    <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40"> 
 
-    <script src="jquery.min.js"></script>
-    <script src="script.js"></script>
+    -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
