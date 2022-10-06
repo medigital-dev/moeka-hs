@@ -10,7 +10,8 @@
     <title>Hotspot @sahabatmoeka</title>
     
     <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <script>
         function openLogin() {
@@ -22,55 +23,59 @@
     </script>
 </head>
 <body>
-    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris1">
-    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris2">
-    <section>
-        <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
-        <div class="content">
-            <img src="img/garis-oval.png" alt="Oval" class="bg-garis">
-            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
-            <h3 class="sub-title">Anda telah logout!</h3>
-            <table>
-                <tr>
-                    <td>Username</td>
-                    <td>:</td>
-                    <td>$(username)</td>
-                </tr>
-                <tr>
-                    <td>IP Address</td>
-                    <td>:</td>
-                    <td>$(ip)</td>
-                </tr>
-                <tr>
-                    <td>MAC Address</td>
-                    <td>:</td>
-                    <td>$(mac)</td>
-                </tr>
-                <tr>
-                    <td>up/down</td>
-                    <td>:</td>
-                    <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
-                </tr>
-                <tr>
-                    <td>uptime/left</td>
-                    <td>:</td>
-                    <td>$(uptime) / $(session-time-left)</td>
-                </tr>
-            </table>
-            <form action="$(link-login)" name="login" onSubmit="return openLogin()">
-                <button type="submit" class="button">Login</button>
-            </form>
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="box-header">
+                        <img src="img/title.png" alt="Sahabat Moeka" class="img-header">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="content position-relative">
+                        <img src="img/garis-oval2.png" alt="Oval" class="position-absolute top-50 start-50 translate-middle img-oval px-2">
+                        <div class="box-logo">
+                            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
+                        </div>
+                        <div class="box-form">
+                            <h6 class="fw-bold">Anda telah logout.</h6>
+                            <div class="box-input">
+                                <table class="table table-borderless table-sm w-100">
+                                    <tr><td>Username</td><td>$(username)</td></tr>
+                                    <tr><td>IP</td><td>$(ip)</td></tr>
+                                    <tr><td>MAC</td><td>$(mac)</td></tr>
+                                    <tr><td>Session</td><td>$(uptime)</td></tr>
+                                    $(if session-time-left)
+                                    <tr><td>Left</td><td>$(session-time-left)</td></tr>
+                                    $(endif)
+                                    <tr><td>Up/Down:</td><td>$(bytes-in-nice)/$(bytes-out-nice)</td></tr>
+                                </table>
+                                <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+                                    <button type="submit" class="btn btn-success">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="box-info">
+                Informasi Penerimaan Siswa & Santri Baru<br>
+                Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
+                <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
+                <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
+            </p>
+            <div class="row">
+                <div class="col text-center">
+                    <img src="img/wifi.png" alt="Logo Wi-Fi" class="" width="40">
+                </div>
+            </div>
         </div>
     </section>
-    <p>
-        Informasi Penerimaan Siswa & Santri Baru<br>
-        Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
-        <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
-        <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
-    </p>
-    <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
 
-    <script src="jquery.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

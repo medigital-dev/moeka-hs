@@ -11,7 +11,8 @@
     <title>Hotspot @sahabatmoeka</title>
     
     <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script>
         var popup = '';
@@ -33,15 +34,49 @@
     </script> 
 </head>
 <body onLoad="openAdvert()">
-    <section>
-        <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
-        <div class="content">
-            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
-            <h3 class="sub-title">Advertisement</h3>
-            <p>
-                If nothing happens, open <a href="$(link-redirect)" target="hotspot_advert">advertisement</a> manually.
+    <section class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="box-header">
+                        <img src="img/title.png" alt="Sahabat Moeka" class="img-header">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="content position-relative">
+                        <img src="img/garis-oval2.png" alt="Oval" class="position-absolute top-50 start-50 translate-middle img-oval px-2">
+                        <div class="box-logo">
+                            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
+                        </div>
+                        <div class="box-form">
+                            <h6 class="fw-bold">Advertisement</h6>
+                            <div class="box-input">
+                                <p class="m-0 p-0 lh-1">
+                                    If nothing happens, open <a href="$(link-redirect)" target="hotspot_advert" class="text-decoration-none text-primary">advertisement</a> manually.
+                                </p>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+            </div>
+            <p class="box-info">
+                Informasi Penerimaan Siswa & Santri Baru<br>
+                Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
+                <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
+                <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
             </p>
+            <div class="row">
+                <div class="col text-center">
+                    <img src="img/wifi.png" alt="Logo Wi-Fi" class="" width="40">
+                </div>
+            </div>
         </div>
     </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
