@@ -47,14 +47,9 @@ body {
 input[type="text"], input[type="password"] {
     padding: 0.6rem;
     border-radius: 10px;
-    border: none;
-    background-color: #214194;
-    color: white;
 }
 
 ::placeholder {
-    color: white;
-    opacity: 0.8;
     text-align: center;
 }
 
@@ -97,14 +92,18 @@ a:hover {
     color: #fff;
 }
 
-.wifi-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 1rem;
+.img-oval {
+    width: 200%;
+    z-index: -1;
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 600px) {
+    .img-oval {
+        width: 175%;
+    }
+}
+
+@media screen and (max-width: 530px){
     .img-header {
         width: 320px;
     }
@@ -112,6 +111,10 @@ a:hover {
     .content {
         width: 240px;
         margin-top: -1.5rem;
+    }
+
+    .img-oval {
+        width: 150%;
     }
 }
 

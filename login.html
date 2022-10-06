@@ -7,7 +7,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="expires" content="-1" />
 
-    <title>Welcom to Hotspot @sahabatmoeka</title>
+    <title>Hotspot @sahabatmoeka</title>
     
     <link rel="shortcut icon" href="img/moeka.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,7 +21,6 @@
         <input type="hidden" name="dst" value="$(link-orig)" />
         <input type="hidden" name="popup" value="true" />
     </form>
-
     <script src="js/md5.js"></script>
     <script>
         function doLogin() {
@@ -30,7 +29,6 @@
             document.sendin.submit();
             return false;
         }
-
     </script>
     $(endif)
     <section class="py-4">
@@ -44,40 +42,48 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="content">
+                    <div class="content position-relative">
+                        <img src="img/garis-oval2.png" alt="Oval" class="position-absolute top-50 start-50 translate-middle img-oval px-2">
                         <div class="box-logo">
                             <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
-                        </div>
+                        </div>                        
+                        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif) id="formLogin">
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
                         <div class="box-form">
                             <div class="box-input">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Username">
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="$(username)">
+                                    <div class="invalid-feedback">
+                                        Username harus diisi!
+                                      </div>
                                   </div>
                             </div>
                             <div class="box-input">
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder="password">
                                   </div>
                             </div>
+                            $(if error)
                             <div class="box-input">
-                                $(if error)
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     $(error)
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                                $(endif)
+                                  </div>
                             </div>
+                            $(endif)
                             <div class="box-input">
                                 <div class="d-grid gap-2 d-md-block">
-                                    <button class="btn-login" type="button">Connect</button>
+                                    <button class="btn-login" id="connect" type="submit">Connect</button>
                                 </div>
                                 $(if trial == 'yes')
-                                <span class="small">
-                                    Trial Wi-Fi Tersedia!, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" class="text-decoration-none link-success">klik disini</a>.
-                                </span>
+                                <p class="small lh-1 m-0 pt-2">
+                                    Wi-Fi Gratis Tersedia!, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" class="text-decoration-none">klik disini</a>.
+                                </p>
                                 $(endif)
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -87,49 +93,13 @@
                 <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
                 <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
             </p>
-        </div>
-        <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40">
-    </section>
-
-    <!-- 
-        
-        <img src="img/aksesoris.png" alt="aksesoris" class="position-fixed " style="width: 100px;">
-    <img src="img/aksesoris.png" alt="aksesoris" class="aksesoris2">
-    <section>
-        <img src="img/title.png" alt="Sahabat Moeka" class="img-title">
-        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
-        <input type="hidden" name="dst" value="$(link-orig)" />
-        <input type="hidden" name="popup" value="true" />
-        <div class="content">
-            <img src="img/garis-oval.png" alt="Oval" class="bg-garis">
-            <img src="img/moeka.png" alt="Logo Moeka" class="img-logo">
-            <div class="input-box" style="margin-top: 10px;">
-                <input type="text" name="username" id="username" placeholder="username" value="$(username)">
+            <div class="row">
+                <div class="col text-center">
+                    <img src="img/wifi.png" alt="Logo Wi-Fi" class="" width="40">
+                </div>
             </div>
-            <div class="input-box" style="margin-bottom: 1rem;">
-                <input type="password" name="password" id="password" placeholder="password">
-            </div>
-            $(if error)
-            <p>$(error)</p>
-            $(endif)
-            <button type="submit" class="login">Connect</button>
-            $(if trial == 'yes')
-                <small class="trial">
-                    Frial Wi-Fi Tersedia!, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">klik disini</a>.
-                </small>
-            $(endif)
         </div>
-        </form>
     </section>
-    <p>
-        Informasi Penerimaan Siswa & Santri Baru<br>
-        Tahun Pelajaran <span id="tp"></span>, Kunjungi Media Kami di:<br>
-        <a href="https://berbagi.link/sahabatmoeka" class="link" target="_blank">@sahabatmoeka</a><br>
-        <a href="http://ppdb.smkmuhkarangmojo.sch.id" target="_blank" class="link">www.ppdb.smkmuhkarangmojo.sch.id</a>
-    </p>
-    <img src="img/wifi.png" alt="Logo Wi-Fi" class="wifi-logo" width="40"> 
-
-    -->
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
